@@ -11,7 +11,7 @@
 	<groupId>top.minicreo</groupId>
 	<artifactId>cloud-music</artifactId>
 	<version>0.0.1</version>
-	<name>cloud-music</name>
+	<name>music</name>
 	<description>Cloud music project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
