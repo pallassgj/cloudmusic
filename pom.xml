@@ -11,7 +11,7 @@
 	<groupId>top.minicreo</groupId>
 	<artifactId>cloud-music</artifactId>
 	<version>0.0.1</version>
-	<name>music</name>
+	<name>cloud-music</name>
 	<description>Cloud music project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -48,8 +48,24 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
 			</plugin>
 		</plugins>
+		<resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
 	</build>
 
 </project>
