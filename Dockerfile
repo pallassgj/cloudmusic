@@ -17,12 +17,6 @@ RUN mvn -s /app/settings.xml -f /app/pom.xml clean package -Dmaven.test.skip=tru
 # 选择运行时基础镜像
 FROM alpine:3.15.4
 
-#ENV MYSQL_HOST 10.0.224.12
-#ENV MYSQL_USER_NAME root
-#ENV MYSQL_PASSWORD MiniCreo2022
-#ENV DATABASE_NAME music
-#ENV APPLICATION_PORT 80
-
 # 容器默认时区为UTC，如需使用上海时间请启用以下时区设置命令
 RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo Asia/Shanghai > /etc/timezone
 
